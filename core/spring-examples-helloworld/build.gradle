@@ -1,0 +1,31 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'application'
+
+mainClassName = 'com.cyberman.springexample.core.helloworld.MainClass'
+
+group = 'com.cyberman.springexample.core'
+version = '1.0-SNAPSHOT'
+
+description = "This is an exemple for testing spring core"
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+task(runExample, dependsOn: 'classes', type: JavaExec) {
+  main = mainClassName
+  classpath = sourceSets.main.runtimeClasspath
+}
+
+repositories {
+
+  mavenLocal()
+  mavenCentral()
+
+}
+
+dependencies {
+  compile 'org.springframework:spring-core:4.1.4.RELEASE'
+  compile 'org.springframework:spring-context:4.1.4.RELEASE'
+}
+

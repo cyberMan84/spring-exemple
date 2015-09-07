@@ -1,0 +1,20 @@
+#Exclude compiled files
+*.class
+
+# Package Files #
+*.jar
+.idea/
+*.iml
+
+#Maven temp folders
+target/
+
+#gradle temp folders and file
+build/
+.gradle/
+gradle/
+
+
+hs_err_pid*
+#Mac OS
+.DS_Store
